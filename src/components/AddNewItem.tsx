@@ -21,7 +21,7 @@ export const AddNewItem = ({onAdd, toggleButtonText, dark}: AddNewItemProps) => 
 
     return (
         <div className="py-2">
-            <button className={`p-2 m-2 rounded-md shadow ${dark ? "darkbtn" : 'lightbtn'}`} onClick={() => setShowForm(true)}>{toggleButtonText}</button>
+            <button className={`p-2 m-2 rounded-md ${dark ? "darkbtn" : 'lightbtn'}`} onClick={() => setShowForm(true)}>{toggleButtonText}</button>
         </div>
     )
 }

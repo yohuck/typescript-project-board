@@ -8,15 +8,16 @@ type ColumnProps = {
 
 export const Column = ({ text }: ColumnProps) => {
   return (
-    <div className="column-container p-4 rounded-sm shadow bg-slate-300 max-w-sm">
-      <div className="column-title text-lg font-bold">{text}</div>
+    <div className="column-container shadow h-full outline outline-stone-900 bg-slate-300 px-4 rounded-sm">
+      <div className="column-title text-2xl pt-3 pl-2 font-bold">{text}</div>
       <Card text="Learn React" />
       <Card text="Learn Typescript" />
       <Card text="Learn Tailwind" />
       <AddNewItem
         toggleButtonText="+ Add another task"
         onAdd={console.log}
-        dark />
+        dark
+         />
     </div>
   );
 };

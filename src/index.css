@@ -4,11 +4,15 @@
 
 .darkbtn {
 background-color: #1a202c;
+border: 1px solid black;
 color: white;
 }
 
-.darkbtn:hover{
-opacity: 0.8
+.darkbtn:hover, .darkbtn:focus{
+background-color: hsla(180, 22%, 5%, 0.86);
+outline: 2px solid #34d399;
+box-shadow: 5px 5px hsla(180, 22%, 5%, 0.5);
+
 }
 
 .lightbtn {
@@ -20,6 +24,6 @@ background-color: #34d399
 }
 
 .shadow{
-    box-shadow: 5px 4px hsla(180, 22%, 5%, 0.5);
+    box-shadow: 8px 8px hsla(180, 22%, 5%, 0.5);
     
 }
