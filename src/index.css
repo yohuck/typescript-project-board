@@ -19,3 +19,7 @@ border: 1px solid #1a202c;
 background-color: #34d399
 }
 
+.shadow{
+    box-shadow: 5px 4px hsla(180, 22%, 5%, 0.5);
+    
+}

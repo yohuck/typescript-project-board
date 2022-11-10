@@ -6,5 +6,5 @@ type CardProps = {
 }
 
 export const Card = ({text}: CardProps) => {
-    return <div className="card-container bg-slate-100 m-1 p-1">{text}</div>
+    return <div className="shadow card-container bg-slate-100 mx-2 my-4 p-3 min-h-[90px] rounded-md">{text}</div>
 }
