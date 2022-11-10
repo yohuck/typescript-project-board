@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "./Card";
+import { AddNewItem } from "./AddNewItem";
 
 type ColumnProps = {
   text: string;
@@ -12,6 +13,10 @@ export const Column = ({ text }: ColumnProps) => {
       <Card text="Learn React" />
       <Card text="Learn Typescript" />
       <Card text="Learn Tailwind" />
+      <AddNewItem
+        toggleButtonText="+ Add another task"
+        onAdd={console.log}
+        dark />
     </div>
   );
 };

@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.darkbtn {
+background-color: #1a202c;
+color: white;
+}
+
+.darkbtn:hover{
+opacity: 0.8
+}
+
+.lightbtn {
+border: 1px solid #1a202c;
+}
+
+.lightbtn:hover{
+background-color: #34d399
+}
+

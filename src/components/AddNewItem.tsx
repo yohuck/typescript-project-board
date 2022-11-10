@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NewItemForm } from "./NewItemForm";
 
 type AddNewItemProps = {
     onAdd(text: string): void;
@@ -7,15 +8,20 @@ type AddNewItemProps = {
 }
 
 export const AddNewItem = ({onAdd, toggleButtonText, dark}: AddNewItemProps) => {
-    const [showForm, setShowForm] = useState(false);
+    const [showForm, setShowForm] = useState<boolean>(false);
 
     if(showForm){
-        console.log('yellloooo')
+       return (
+              <NewItemForm onAdd={text => {
+                onAdd(text);
+                setShowForm(false);
+              }} />
+       )
     }
 
     return (
         <div className="py-2">
-            <button onClick={() => setShowForm(true)}>{toggleButtonText}</button>
+            <button className={`p-2 m-2 rounded-md ${dark ? "darkbtn" : 'lightbtn'}`} onClick={() => setShowForm(true)}>{toggleButtonText}</button>
         </div>
     )
 }

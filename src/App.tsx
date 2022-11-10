@@ -8,6 +8,7 @@ export const App = () =>{
     <AddNewItem
       toggleButtonText="+ Add another list"
       onAdd={console.log}
+      dark={false}
     />
   </div>
 }
