@@ -1,18 +1,22 @@
 import React from "react";
 import { Card } from "./Card";
 import { AddNewItem } from "./AddNewItem";
+import {useAppState} from "../state/AppStateContext";
 
 type ColumnProps = {
   text: string;
+  id: string;
 };
 
-export const Column = ({ text }: ColumnProps) => {
+export const Column = ({ text, id }: ColumnProps) => {
+  const { getTasksByListId } = useAppState();
+  const tasks = getTasksByListId(id);
   return (
     <div className="column-container shadow h-full outline outline-stone-900 bg-slate-300 px-4 rounded-sm">
       <div className="column-title text-2xl pt-3 pl-2 font-bold">{text}</div>
-      <Card text="Learn React" />
-      <Card text="Learn Typescript" />
-      <Card text="Learn Tailwind" />
+     {tasks.map((task) => (
+      <Card text={task.text} key={task.id} id={task.id}/>
+     ))}
       <AddNewItem
         toggleButtonText="+ Add another task"
         onAdd={console.log}

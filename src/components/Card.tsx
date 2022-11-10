@@ -2,6 +2,7 @@ import React from "react";
 
 type CardProps = {
     text: string;
+    id: string;
     urgent?: boolean;
 }
 
